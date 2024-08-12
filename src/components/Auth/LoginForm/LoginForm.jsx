@@ -1,41 +1,62 @@
-import { useState } from 'react'
-import * as usersService from '../../../../utilities/user-services'
+import { useState } from "react";
+import * as usersService from "../../../../utilities/user-services";
+import "./LoginForm.css";
 
 export default function LoginForm({ setUser }) {
   const [credentials, setCredentials] = useState({
-    email: '',
-    password: ''
-  })
+    email: "",
+    password: "",
+  });
 
-  const [error, setError] = useState('')
+  const [error, setError] = useState("");
 
   function handleChange(evt) {
-    setCredentials({ ...credentials, [evt.target.name]: evt.target.value })
-    setError('')
+    setCredentials({ ...credentials, [evt.target.name]: evt.target.value });
+    setError("");
   }
 
   async function handleSubmit(evt) {
-    evt.preventDefault()
+    evt.preventDefault();
     try {
-      const user = await usersService.login(credentials)
-      setUser(user)
+      const user = await usersService.login(credentials);
+      setUser(user);
     } catch {
-      setError('Log In Failed - Try Again')
+      setError("Log In Failed - Try Again");
     }
   }
 
   return (
-    <div>
-      <div className="form-container">
-        <form autoComplete="off" onSubmit={handleSubmit}>
-          <label>Email</label>
-          <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
-          <label>Password</label>
-          <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
-          <button type="submit">LOG IN</button>
-        </form>
-      </div>
-      <p className="error-message">&nbsp;{error}</p>
+    <div className="LoginPage">
+      <h1 className="Logo">GM</h1>
+      <h1 className="LoginTitle">Log in</h1>
+      <p>Enter the email and password for your ##### account.</p>
+
+      <form className="LoginForm" autoComplete="off" onSubmit={handleSubmit}>
+        <input
+          placeholder="Email address"
+          minLength="5"
+          maxLength="20"
+          type="text"
+          name="email"
+          value={credentials.email}
+          onChange={handleChange}
+          required
+        />
+        <input
+          placeholder="Password"
+          minLength="5"
+          maxLength="20"
+          type="password"
+          name="password"
+          value={credentials.password}
+          onChange={handleChange}
+          required
+        />
+        <button className="LoginFormBtn" type="submit">
+          Log in
+        </button>
+      </form>
+      {/* <p>forgot password?</p> */}
     </div>
-  )
+  );
 }
