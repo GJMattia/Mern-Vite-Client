@@ -15,7 +15,10 @@ function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path="/" element={<MainPage user={user} />} />
+            <Route
+              path="/"
+              element={<MainPage user={user} setUser={setUser} />}
+            />
           </Routes>
         </>
       ) : (

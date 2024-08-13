@@ -20,7 +20,6 @@ export default function SignUpForm({ setUser }) {
     const { name, value } = evt.target;
 
     if (name === "dd" || name === "mm" || name === "yyyy") {
-      // Allow only numeric input
       if (/^\d*$/.test(value)) {
         let isValid = true;
 
@@ -78,6 +77,7 @@ export default function SignUpForm({ setUser }) {
           onChange={handleChange}
           required
         />
+
         <input
           minLength="5"
           maxLength="20"
