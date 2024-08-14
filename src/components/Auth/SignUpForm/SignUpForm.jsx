@@ -77,7 +77,17 @@ export default function SignUpForm({ setUser }) {
           onChange={handleChange}
           required
         />
-
+        <label
+          className={
+            formData.name.length === 0
+              ? "Grey"
+              : formData.name.length > 0 && formData.name.length < 3
+              ? "Red"
+              : "Green"
+          }
+        >
+          Username must be at least 3 characters long
+        </label>
         <input
           minLength="5"
           maxLength="20"
@@ -88,6 +98,19 @@ export default function SignUpForm({ setUser }) {
           onChange={handleChange}
           required
         />
+        <label
+          className={
+            formData.email.length === 0
+              ? "Grey"
+              : !formData.email.includes("@")
+              ? "Red"
+              : !/(\.com|\.net)$/.test(formData.email)
+              ? "Red"
+              : "Green"
+          }
+        >
+          Please Enter a valid Email
+        </label>
         <input
           minLength="6"
           maxLength="20"
@@ -98,6 +121,17 @@ export default function SignUpForm({ setUser }) {
           onChange={handleChange}
           required
         />
+        <label
+          className={
+            formData.password.length === 0
+              ? "Grey"
+              : formData.password.length < 6
+              ? "Red"
+              : "Green"
+          }
+        >
+          Password must be 6 characters long
+        </label>
         <input
           minLength="6"
           maxLength="20"
@@ -108,7 +142,32 @@ export default function SignUpForm({ setUser }) {
           onChange={handleChange}
           required
         />
-        <p>Please enter your date of birth</p>
+        <label
+          className={
+            formData.confirm.length === 0
+              ? "Grey"
+              : formData.confirm !== formData.password
+              ? "Red"
+              : "Green"
+          }
+        >
+          Retype Password
+        </label>
+        <p
+          className={`BirthTitle ${
+            formData.birthday.dd.length === 0 &&
+            formData.birthday.mm.length === 0 &&
+            formData.birthday.yyyy.length === 0
+              ? "Grey"
+              : formData.birthday.dd.length === 2 &&
+                formData.birthday.mm.length === 2 &&
+                formData.birthday.yyyy.length === 4
+              ? "Green"
+              : "Red"
+          }`}
+        >
+          Please enter your date of birth
+        </p>
         <div className="Birthday">
           <input
             placeholder="MM"

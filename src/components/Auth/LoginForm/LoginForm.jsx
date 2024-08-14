@@ -27,7 +27,7 @@ export default function LoginForm({ setUser }) {
 
   return (
     <div className="LoginPage">
-      <h1 className="Logo">GM</h1>
+      <h1 className="Logo">ToneTony LLC</h1>
       <h1 className="LoginTitle">Log in</h1>
       <p>Enter the email and password for your ##### account.</p>
 
@@ -56,7 +56,6 @@ export default function LoginForm({ setUser }) {
           Log in
         </button>
       </form>
-      {/* <p>forgot password?</p> */}
     </div>
   );
 }

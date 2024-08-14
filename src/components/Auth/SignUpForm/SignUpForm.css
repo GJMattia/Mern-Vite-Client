@@ -14,11 +14,16 @@
   border: 1px solid #3e4759;
   font-size: 1rem;
   border-radius: 0.2rem;
-  margin: 1rem;
+  margin: 0.8rem;
   background-color: transparent;
   padding: 0.5rem;
   border-radius: 0.5rem;
   color: white;
+}
+
+.SignUpForm > label {
+  font-size: 0.8rem;
+  width: 90%;
 }
 
 .SignUpForm > input::placeholder {
@@ -43,7 +48,16 @@
 }
 
 .SignUpBtn:hover {
-  background-color: rgb(0, 191, 255);
+  background-color: dodgerblue;
+}
+
+.BirthTitle {
+  width: 90%;
+  border-top: 1px solid #3e4759;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 1rem;
+  margin-bottom: 0;
 }
 
 .Birthday {
@@ -77,4 +91,16 @@
 .Birthday > input:focus {
   outline: none;
   border: 1px solid dodgerblue;
+}
+
+.Grey {
+  color: #838894;
+}
+
+.Red {
+  color: crimson;
+}
+
+.Green {
+  color: lawngreen;
 }

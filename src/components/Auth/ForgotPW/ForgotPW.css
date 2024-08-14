@@ -1,0 +1,88 @@
+.ForgotPW {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.ForgotPW > p {
+  margin-bottom: 0rem;
+}
+
+.ResetInput {
+  width: 90%;
+  height: 2rem;
+  border: 1px solid #3e4759;
+  font-size: 1rem;
+  border-radius: 0.2rem;
+  margin: 1rem;
+  background-color: transparent;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.ResetInput::placeholder {
+  color: #9ba0ab;
+}
+
+.ResetInput:focus {
+  outline: none;
+  border: 1px solid dodgerblue;
+}
+
+.ResetInput2 {
+  width: 30%;
+  height: 2rem;
+  border: 1px solid #3e4759;
+  font-size: 1rem;
+  border-radius: 0.2rem;
+  margin: 1rem;
+  background-color: transparent;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  text-align: center;
+}
+
+.ResetInput2::placeholder {
+  color: #9ba0ab;
+}
+
+.ResetInput2:focus {
+  outline: none;
+  border: 1px solid dodgerblue;
+}
+.ForgotBtn {
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  border: none;
+  background-color: dodgerblue;
+  width: 75%;
+  cursor: pointer;
+  margin: 0.5rem;
+  padding: 0.8rem;
+}
+
+.ForgotBtn:hover {
+  color: white;
+  background-color: rgb(15, 15, 115);
+}
+
+.Test {
+  font-size: 0.8rem;
+  width: 90%;
+  color: #838894;
+}
+
+.ResetBtn {
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  border: none;
+  background-color: dodgerblue;
+  width: 90%;
+  cursor: pointer;
+  margin: 1.5rem;
+  padding: 0.8rem;
+}

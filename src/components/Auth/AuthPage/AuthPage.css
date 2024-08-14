@@ -14,7 +14,7 @@
 }
 
 .AuthHeader {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -29,5 +29,14 @@
 }
 
 .AuthLink:hover {
+  text-decoration: underline;
+}
+
+.Forgot {
+  cursor: pointer;
+  color: dodgerblue;
+}
+
+.Forgot:hover {
   text-decoration: underline;
 }
