@@ -50,7 +50,7 @@
   border-radius: 0.2rem;
   font-size: 1rem;
   border: none;
-  background-color: #0c416c;
+  background-color: dodgerblue;
   width: 95%;
   cursor: pointer;
   margin: 0.5rem;
@@ -58,5 +58,5 @@
 }
 
 .LoginFormBtn:hover {
-  background-color: dodgerblue;
+  background-color: rgb(97, 176, 255);
 }

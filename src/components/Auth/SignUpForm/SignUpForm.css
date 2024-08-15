@@ -40,15 +40,16 @@
   border-radius: 0.2rem;
   font-size: 1rem;
   border: none;
-  background-color: #0c416c;
+  background-color: dodgerblue;
   width: 95%;
   cursor: pointer;
   padding: 1rem;
   margin-top: 1rem;
+  color: black;
 }
 
 .SignUpBtn:hover {
-  background-color: dodgerblue;
+  background-color: rgb(101, 178, 255);
 }
 
 .BirthTitle {
@@ -91,16 +92,4 @@
 .Birthday > input:focus {
   outline: none;
   border: 1px solid dodgerblue;
-}
-
-.Grey {
-  color: #838894;
-}
-
-.Red {
-  color: crimson;
-}
-
-.Green {
-  color: lawngreen;
 }

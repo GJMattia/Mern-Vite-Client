@@ -27,7 +27,7 @@ export default function LoginForm({ setUser }) {
 
   return (
     <div className="LoginPage">
-      <h1 className="Logo">ToneTony LLC</h1>
+      <h1 className="Logo">Aerodynamics llc</h1>
       <h1 className="LoginTitle">Log in</h1>
       <p>Enter the email and password for your ##### account.</p>
 
@@ -52,7 +52,12 @@ export default function LoginForm({ setUser }) {
           onChange={handleChange}
           required
         />
-        <button className="LoginFormBtn" type="submit">
+        <button
+          className={`LoginFormBtn ${
+            credentials.password.length < 6 ? "NotYet" : ""
+          }`}
+          type="submit"
+        >
           Log in
         </button>
       </form>

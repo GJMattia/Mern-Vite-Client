@@ -201,7 +201,16 @@ export default function SignUpForm({ setUser }) {
             required
           />
         </div>
-        <button className="SignUpBtn" type="submit" disabled={disable}>
+        <button
+          className={`SignUpBtn ${
+            formData.password.length <= 6 ||
+            formData.birthday.yyyy.toString().length !== 4
+              ? "NotYet"
+              : ""
+          }`}
+          type="submit"
+          disabled={disable}
+        >
           Create My Account
         </button>
       </form>

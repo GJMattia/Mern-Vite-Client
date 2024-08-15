@@ -13,6 +13,14 @@ export async function verifyEmail(code) {
   return sendRequest(`${BASE_URL}/verify`, "PUT", code);
 }
 
+export async function sendCode(email) {
+  return sendRequest(`${BASE_URL}/sendcode`, "PUT", email);
+}
+
+export async function resetPW(password) {
+  return sendRequest(`${BASE_URL}/resetpw`, "PUT", password);
+}
+
 export async function checkToken() {
   return sendRequest(`${BASE_URL}/check-token`);
 }

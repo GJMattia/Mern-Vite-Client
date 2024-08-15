@@ -19,3 +19,24 @@ body {
   width: 100%;
   height: 100%;
 }
+
+.NotYet {
+  background-color: #9ba0ab;
+  pointer-events: none;
+}
+
+.Error {
+  color: crimson;
+}
+
+.Grey {
+  color: #838894;
+}
+
+.Red {
+  color: crimson;
+}
+
+.Green {
+  color: lawngreen;
+}

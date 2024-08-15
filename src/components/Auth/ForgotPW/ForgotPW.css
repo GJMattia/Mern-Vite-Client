@@ -6,8 +6,16 @@
   width: 100%;
 }
 
+.ForgotPW > h1 {
+  width: 80%;
+  text-align: center;
+  border-bottom: 1px solid #3e4759;
+  box-sizing: border-box;
+  padding-bottom: 0.5rem;
+}
+
 .ForgotPW > p {
-  margin-bottom: 0rem;
+  margin: 0rem;
 }
 
 .ResetInput {
@@ -39,6 +47,7 @@
   font-size: 1rem;
   border-radius: 0.2rem;
   margin: 1rem;
+  margin-bottom: 0.5rem;
   background-color: transparent;
   padding: 0.5rem;
   border-radius: 0.5rem;
@@ -54,26 +63,10 @@
   outline: none;
   border: 1px solid dodgerblue;
 }
-.ForgotBtn {
-  border-radius: 0.2rem;
-  font-size: 1rem;
-  border: none;
-  background-color: dodgerblue;
-  width: 75%;
-  cursor: pointer;
-  margin: 0.5rem;
-  padding: 0.8rem;
-}
 
-.ForgotBtn:hover {
-  color: white;
-  background-color: rgb(15, 15, 115);
-}
-
-.Test {
+.ForgotPW > label {
   font-size: 0.8rem;
   width: 90%;
-  color: #838894;
 }
 
 .ResetBtn {
@@ -83,6 +76,15 @@
   background-color: dodgerblue;
   width: 90%;
   cursor: pointer;
-  margin: 1.5rem;
+  margin: 1rem;
   padding: 0.8rem;
+}
+
+.ResetBtn:hover {
+  background-color: rgb(75, 161, 253);
+}
+
+.Arrow {
+  padding: 1rem;
+  font-size: 6rem;
 }
